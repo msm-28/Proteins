@@ -1,7 +1,7 @@
 use strict;
 #use warnings;
-#
-opendir my $dir, "/home/madhura/Documents/rmsd_ipsita/frequence_counts/" or die "Cannot open directory: $!";
+
+opendir my $dir, "/home/frequency_counts/" or die "Cannot open directory: $!";
 #my @files = $dir;
 my @files= grep { -f && /\.pdb$/ } readdir $dir;
 closedir $dir;
