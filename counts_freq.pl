@@ -1,7 +1,7 @@
 use strict;
 #use warnings;
 
-opendir my $dir, "/home/frequency_counts/" or die "Cannot open directory: $!";
+opendir my $dir, "/path_to_pdbfiles/" or die "Cannot open directory: $!";
 #my @files = $dir;
 my @files= grep { -f && /\.pdb$/ } readdir $dir;
 closedir $dir;
@@ -48,8 +48,6 @@ foreach(@amino_acids)
 {
 	$aahash{$_}++;
 }
-
-
 
 foreach(keys %aahash)
 {
